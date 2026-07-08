@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中村綾花｜事業共創パートナー — Unfolding Partners</title>
+<meta name="description" content="講座・コミュニティ・教育ビジネスを運営する経営者のための事業共創パートナー。経営者の想いを、人・チーム・AIの力で形にし、人の可能性が解放され共創で循環する事業をつくります。">
+<!-- OGP -->
+<meta property="og:title" content="中村綾花｜事業共創パートナー — Unfolding Partners">
+<meta property="og:description" content="経営と現場の“間”の詰まりを、AIと人で整える。共に創るパートナーとして。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ayazoouen777-stack.github.io/ayaka-online/">
+<meta property="og:site_name" content="Unfolding Partners">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://ayazoouen777-stack.github.io/ayaka-online/images/profile-ayaka.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1500">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1f2d3d;          /* 墨紺（見出し・本文の芯） */
+    --ink-soft: #46586b;     /* 本文 */
+    --dusty: #7b94ac;        /* ダスティブルー主役 */
+    --dusty-deep: #54718b;   /* 濃いダスティブルー */
+    --dusty-pale: #e8eef3;   /* 淡い面 */
+    --mist: #f6f8fa;         /* セクション背景 */
+    --white: #ffffff;
+    --accent: #c4674a;       /* レッドオレンジ（2026・収穫の年）— featured専用 */
+    --accent-soft: #f7ece7;
+    --line-green: #06c755;   /* LINE公式カラー */
+    --serif: "Shippori Mincho B1", "Hiragino Mincho ProN", serif;
+    --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink-soft);
+    background: var(--white);
+    line-height: 1.9;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; }
+  a { color: var(--dusty-deep); }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- ナビ ---------- */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(123,148,172,0.18);
+  }
+  .nav-inner {
+    max-width: 1040px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: flex-end;
+  }
+  .nav-cta {
+    font-size: 13px; font-weight: 700; text-decoration: none;
+    color: var(--white); background: var(--dusty-deep);
+    padding: 9px 20px; border-radius: 999px; letter-spacing: 0.08em;
+    transition: background .25s ease;
+  }
+  .nav-cta:hover { background: var(--ink); }
+
+  /* ---------- ヒーロー ---------- */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #fdfefe 0%, var(--dusty-pale) 78%, #dbe6ee 100%);
+    padding: 168px 0 110px;
+  }
+  .hero-circle {
+    position: absolute; border-radius: 50%; pointer-events: none;
+  }
+  .hero-circle.c1 {
+    width: 560px; height: 560px; right: -140px; top: -120px;
+    border: 1px solid rgba(84,113,139,0.28);
+  }
+  .hero-circle.c2 {
+    width: 560px; height: 560px; right: -100px; top: -60px;
+    border: 1px solid rgba(84,113,139,0.14);
+  }
+  .hero-circle.c3 {
+    width: 220px; height: 220px; left: -80px; bottom: -70px;
+    background: radial-gradient(circle, rgba(123,148,172,0.16), rgba(123,148,172,0));
+  }
+  .hero-inner { position: relative; display: flex; justify-content: space-between; gap: 40px; }
+  .hero-main { max-width: 640px; }
+  .hero-brand {
+    font-size: 12px; letter-spacing: 0.34em; color: var(--dusty-deep);
+    font-weight: 500; margin-bottom: 30px; text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(30px, 4.6vw, 46px);
+    line-height: 1.65; color: var(--ink);
+    margin-bottom: 30px; letter-spacing: 0.03em;
+  }
+  .hero-lead { font-size: 15.5px; line-height: 2.15; margin-bottom: 38px; max-width: 540px; }
+  .hero-name {
+    font-family: var(--serif); font-size: 17px; color: var(--ink);
+    letter-spacing: 0.1em; margin-bottom: 34px;
+  }
+  .hero-name span { display: inline-block; border-top: 1px solid var(--dusty); padding-top: 12px; }
+  .hero-tate {
+    writing-mode: vertical-rl; font-family: var(--serif);
+    font-size: 15px; letter-spacing: 0.42em; color: var(--dusty-deep);
+    align-self: stretch; padding-top: 8px; white-space: nowrap;
+    border-right: 1px solid rgba(84,113,139,0.3); padding-right: 22px;
+    height: 340px;
+  }
+  .hero-visual { flex-shrink: 0; width: 292px; align-self: center; margin: 0; }
+  .hero-visual img {
+    display: block; width: 100%; height: 436px; object-fit: cover;
+    border-radius: 999px 999px 24px 24px;
+    box-shadow: 0 24px 56px rgba(31,45,61,0.16);
+  }
+  .btn-line {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--line-green); color: var(--white);
+    font-weight: 700; font-size: 15px; letter-spacing: 0.06em;
+    padding: 16px 34px; border-radius: 999px; text-decoration: none;
+    box-shadow: 0 8px 24px rgba(6,199,85,0.22);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-line:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(6,199,85,0.3); }
+  .btn-line svg { flex-shrink: 0; }
+  .btn-note { display: block; font-size: 12px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.04em; }
+
+  /* ---------- セクション共通 ---------- */
+  section { padding: 96px 0; }
+  .sec-label {
+    display: flex; align-items: center; gap: 16px;
+    font-size: 12px; letter-spacing: 0.3em; color: var(--dusty-deep);
+    font-weight: 500; margin-bottom: 22px;
+  }
+  .sec-label::before { content: ""; width: 36px; height: 1px; background: var(--dusty); }
+  .sec-title {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(24px, 3.4vw, 34px); color: var(--ink);
+    line-height: 1.6; margin-bottom: 28px; letter-spacing: 0.04em;
+  }
+
+  /* スクロールリビール */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.on { opacity: 1; transform: none; }
+
+  /* ---------- 課題共感 ---------- */
+  .sec-pain { background: var(--white); }
+  .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 40px 0; }
+  .pain-item {
+    background: var(--mist); border-radius: 14px; padding: 26px 28px;
+    font-size: 15px; color: var(--ink); line-height: 1.8;
+    border-left: 3px solid var(--dusty);
+  }
+  .pain-turn {
+    margin-top: 44px; text-align: center;
+    font-family: var(--serif); font-size: clamp(19px, 2.6vw, 25px);
+    color: var(--ink); line-height: 2.1;
+  }
+  .pain-turn strong { color: var(--dusty-deep); font-weight: 600; }
+
+  /* ---------- 事業共創パートナーとは ---------- */
+  .sec-about { background: linear-gradient(180deg, var(--mist) 0%, var(--dusty-pale) 100%); }
+  .about-copy {
+    font-family: var(--serif); font-size: clamp(20px, 3vw, 28px);
+    color: var(--ink); line-height: 2; margin-bottom: 34px; letter-spacing: 0.05em;
+  }
+  .about-body { max-width: 680px; font-size: 15.5px; line-height: 2.2; }
+  .about-head { display: flex; gap: 52px; align-items: center; }
+  .about-visual { flex-shrink: 0; width: 340px; margin: 0; }
+  .about-visual img {
+    display: block; width: 100%; height: 300px; object-fit: cover;
+    border-radius: 20px; box-shadow: 0 14px 38px rgba(31,45,61,0.1);
+  }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 56px; }
+  .pillar {
+    background: var(--white); border-radius: 16px; padding: 34px 28px;
+    box-shadow: 0 4px 20px rgba(31,45,61,0.05);
+  }
+  .pillar-num { font-family: var(--serif); font-size: 13px; color: var(--dusty); letter-spacing: 0.2em; margin-bottom: 14px; }
+  .pillar h3 { font-family: var(--serif); font-size: 18px; color: var(--ink); margin-bottom: 12px; line-height: 1.7; font-weight: 600; }
+  .pillar p { font-size: 14px; line-height: 2; }
+  .flow {
+    margin-top: 60px; display: flex; align-items: center; justify-content: center;
+    gap: 0; row-gap: 18px; flex-wrap: wrap;
+  }
+  .flow-step {
+    display: flex; align-items: center; justify-content: center;
+    width: 96px; height: 96px; border-radius: 50%;
+    background: var(--white); border: 1px solid rgba(84,113,139,0.35);
+    font-family: var(--serif); font-size: 15px; color: var(--ink);
+    letter-spacing: 0.08em;
+  }
+  .flow-arrow { color: var(--dusty); font-size: 18px; padding: 0 12px; }
+  .flow-caption { text-align: center; margin-top: 22px; font-size: 13px; color: var(--dusty-deep); letter-spacing: 0.12em; }
+  .about-principle {
+    margin-top: 56px; background: rgba(255,255,255,0.7); border-radius: 14px;
+    padding: 26px 32px; font-size: 14px; line-height: 2; max-width: 720px;
+    border-left: 3px solid var(--dusty-deep);
+  }
+  .about-principle strong { color: var(--ink); }
+
+  /* ---------- 料金 ---------- */
+  .sec-price { background: var(--white); }
+  .price-head { display: flex; gap: 52px; align-items: center; margin-bottom: 56px; }
+  .price-lead { max-width: 640px; font-size: 15.5px; line-height: 2.15; }
+  .price-lead strong { color: var(--ink); }
+  .price-visual { flex-shrink: 0; width: 340px; margin: 0; }
+  .price-visual img {
+    display: block; width: 100%; height: 240px; object-fit: cover;
+    border-radius: 20px; box-shadow: 0 14px 38px rgba(31,45,61,0.1);
+  }
+  .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+  .price-card {
+    position: relative; background: var(--white);
+    border: 1px solid rgba(123,148,172,0.35); border-radius: 18px;
+    padding: 40px 30px 34px; display: flex; flex-direction: column;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .price-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(31,45,61,0.08); }
+  .price-card.featured {
+    border: 2px solid var(--accent);
+    box-shadow: 0 16px 40px rgba(196,103,74,0.13);
+    background: linear-gradient(180deg, var(--white) 0%, var(--accent-soft) 130%);
+  }
+  .badge {
+    position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+    background: var(--accent); color: var(--white);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
+    padding: 5px 20px; border-radius: 999px; white-space: nowrap;
+  }
+  .price-name { font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--ink); line-height: 1.6; margin-bottom: 6px; }
+  .price-for { font-size: 12.5px; color: var(--dusty-deep); letter-spacing: 0.06em; margin-bottom: 22px; min-height: 40px; }
+  .price-amount { font-family: var(--serif); color: var(--ink); margin-bottom: 24px; }
+  .price-amount .yen { font-size: 30px; font-weight: 700; letter-spacing: 0.02em; }
+  .price-amount .unit { font-size: 13px; color: var(--ink-soft); margin-left: 4px; }
+  .price-card.featured .yen { color: var(--accent); }
+  .price-desc { font-size: 14px; line-height: 2.05; flex-grow: 1; }
+  .price-note {
+    margin-top: 48px; font-size: 13px; line-height: 2; color: var(--ink-soft);
+    background: var(--mist); border-radius: 12px; padding: 22px 28px; max-width: 780px;
+  }
+
+  /* ---------- メンバー紹介 ---------- */
+  .sec-profile { background: var(--mist); }
+  .members-lead { max-width: 640px; font-size: 15.5px; line-height: 2.15; margin-bottom: 64px; }
+  .profile-inner { display: flex; gap: 56px; align-items: flex-start; }
+  .profile-photo {
+    flex-shrink: 0; width: 272px; margin: 0;
+  }
+  .profile-photo img {
+    display: block; width: 100%; height: 340px; object-fit: cover; object-position: center top;
+    border-radius: 999px 999px 20px 20px;
+    box-shadow: 0 18px 44px rgba(31,45,61,0.14);
+  }
+  .profile-photo-ph {
+    flex-shrink: 0; width: 272px; height: 340px;
+    border-radius: 999px 999px 20px 20px;
+    background: linear-gradient(165deg, var(--dusty-pale) 0%, #cfdce6 55%, var(--dusty) 130%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+    box-shadow: 0 18px 44px rgba(31,45,61,0.1);
+    position: relative; overflow: hidden;
+  }
+  .profile-photo-ph::before {
+    content: ""; position: absolute; width: 190px; height: 190px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.55);
+  }
+  .profile-photo-ph .ph-initial {
+    font-family: var(--serif); font-size: 64px; font-weight: 600;
+    color: var(--white); letter-spacing: 0.04em; line-height: 1; position: relative;
+  }
+  .profile-photo-ph .ph-name {
+    font-size: 11px; letter-spacing: 0.3em; color: var(--dusty-deep); position: relative;
+  }
+  .member-divider {
+    border: none; border-top: 1px solid rgba(123,148,172,0.35);
+    margin: 76px 0;
+  }
+  .profile-body { flex-grow: 1; }
+  .profile-name { font-family: var(--serif); font-size: 26px; color: var(--ink); font-weight: 600; letter-spacing: 0.08em; }
+  .profile-kana { font-size: 12px; letter-spacing: 0.28em; color: var(--dusty-deep); margin-bottom: 6px; }
+  .profile-role { font-size: 14px; color: var(--dusty-deep); letter-spacing: 0.08em; margin-bottom: 26px; }
+  .profile-text { font-size: 15px; line-height: 2.2; margin-bottom: 24px; max-width: 580px; }
+  .profile-quote {
+    font-family: var(--serif); font-size: 17px; color: var(--ink); line-height: 2;
+    background: var(--white); border-left: 3px solid var(--accent);
+    border-radius: 0 14px 14px 0; padding: 20px 26px; margin: 0 0 32px;
+    max-width: 580px; box-shadow: 0 4px 18px rgba(31,45,61,0.05);
+  }
+  .profile-skills-label {
+    font-size: 12px; letter-spacing: 0.24em; color: var(--dusty-deep);
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .profile-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; max-width: 580px; }
+  .profile-chips span {
+    font-size: 13px; color: var(--ink); background: var(--white);
+    border: 1px solid rgba(123,148,172,0.45); border-radius: 999px;
+    padding: 6px 16px; letter-spacing: 0.04em;
+  }
+  .profile-facts-line {
+    font-size: 12.5px; color: var(--ink-soft); letter-spacing: 0.04em;
+    margin-bottom: 30px; line-height: 2;
+  }
+  .profile-mission {
+    font-family: var(--serif); font-size: 17px; color: var(--ink);
+    line-height: 2.1; border-left: 3px solid var(--dusty-deep); padding-left: 22px;
+  }
+
+  /* ---------- CTA ---------- */
+  .sec-cta {
+    background-color: var(--ink);
+    background-image: linear-gradient(160deg, rgba(31,45,61,0.86) 0%, rgba(44,66,87,0.78) 70%, rgba(84,113,139,0.72) 100%), url("images/cta-weave.jpg");
+    background-size: cover; background-position: center;
+    color: rgba(255,255,255,0.85); position: relative; overflow: hidden;
+  }
+  .cta-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); pointer-events: none; }
+  .cta-circle.c1 { width: 480px; height: 480px; right: -120px; bottom: -200px; }
+  .cta-circle.c2 { width: 480px; height: 480px; right: -70px; bottom: -150px; border-color: rgba(255,255,255,0.07); }
+  .cta-inner { position: relative; text-align: center; max-width: 640px; margin: 0 auto; }
+  .cta-label { font-size: 12px; letter-spacing: 0.3em; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+  .cta-title {
+    font-family: var(--serif); font-size: clamp(24px, 3.4vw, 32px);
+    color: var(--white); font-weight: 600; line-height: 1.8; margin-bottom: 10px;
+  }
+  .cta-sub { font-family: var(--serif); font-size: 15px; color: rgba(255,255,255,0.75); letter-spacing: 0.14em; margin-bottom: 30px; }
+  .cta-body { font-size: 15px; line-height: 2.2; margin-bottom: 40px; }
+  .cta-frame {
+    display: inline-block; font-size: 12.5px; letter-spacing: 0.1em;
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 999px;
+    padding: 7px 22px; margin-bottom: 36px; color: rgba(255,255,255,0.8);
+  }
+
+  /* ---------- フッター ---------- */
+  footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 40px 0 32px; font-size: 12px; letter-spacing: 0.08em; }
+  .footer-inner { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .footer-brand { font-family: var(--serif); color: rgba(255,255,255,0.8); }
+  .footer-info { border-bottom: 1px solid rgba(255,255,255,0.14); padding-bottom: 22px; margin-bottom: 18px; }
+  .footer-info-title { font-family: var(--serif); font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8); margin: 0 0 12px; letter-spacing: 0.14em; }
+  .footer-info-list { margin: 0; display: grid; gap: 6px; }
+  .footer-info-list div { display: flex; gap: 14px; }
+  .footer-info-list dt { min-width: 7em; color: rgba(255,255,255,0.4); }
+  .footer-info-list dd { margin: 0; }
+  .footer-info-list a { color: rgba(255,255,255,0.75); text-decoration: underline; }
+  .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  /* ---------- レスポンシブ ---------- */
+  @media (max-width: 860px) {
+    section { padding: 72px 0; }
+    .hero { padding: 130px 0 80px; }
+    .hero-tate { display: none; }
+    .hero-inner { flex-direction: column; }
+    .hero-visual { width: 224px; margin: 40px auto 0; }
+    .hero-visual img { height: 330px; }
+    .about-head { flex-direction: column; align-items: stretch; gap: 36px; }
+    .about-visual { width: 100%; }
+    .about-visual img { height: 220px; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr; }
+    .price-head { flex-direction: column; align-items: stretch; gap: 36px; }
+    .price-visual { width: 100%; }
+    .price-visual img { height: 200px; }
+    .price-grid { grid-template-columns: 1fr; gap: 34px; }
+    .profile-inner { flex-direction: column; }
+    .profile-photo { width: 224px; margin: 0 auto; }
+    .profile-photo img { height: 300px; }
+    .profile-photo-ph { width: 224px; height: 300px; margin: 0 auto; }
+    .flow-step { width: 78px; height: 78px; font-size: 13px; }
+    .flow-arrow { padding: 0 6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ナビ -->
+<div class="nav">
+  <div class="nav-inner">
+    <!-- 出口はLINE1本。このボタンは最下部CTAセクションへの案内（アンカー） -->
+    <a class="nav-cta" href="#contact">個別戦略会議のご案内</a>
+  </div>
+</div>
+
+<!-- ① ヒーロー -->
+<header class="hero" id="top">
+  <div class="hero-circle c1"></div>
+  <div class="hero-circle c2"></div>
+  <div class="hero-circle c3"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-main">
+      <p class="hero-brand">Unfolding Partners</p>
+      <h1>チームを増やしたのに、<br>なぜか自分が一番忙しい。</h1>
+      <p class="hero-lead">
+        講座・コミュニティ・教育ビジネスを運営する経営者のための、事業共創パートナー。<br>
+        経営者の想いを、人・チーム・AIの力で形にし、<br class="pc">人の可能性が解放され、共創で循環する事業をつくります。
+      </p>
+      <p class="hero-name"><span>中村綾花｜事業共創パートナー</span></p>
+      <a class="btn-line" href="https://lin.ee/iEtztWo" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.55 7.39 8.35 8.03.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.88.55 1.08-.46 5.84-3.44 7.97-5.89C21.44 13.4 22 11.85 22 10.13 22 5.64 17.52 2 12 2z"/></svg>
+        公式LINEで相談する
+      </a>
+      <span class="btn-note">※ ご登録後、個別戦略会議（60分・無料）をご案内しています</span>
+    </div>
+    <figure class="hero-visual">
+      <img src="images/hero-key.jpg" alt="ダスティブルーの水彩の中で、光の糸がゆるやかにつながり円を描く抽象イメージ" width="733" height="1100">
+    </figure>
+    <div class="hero-tate">つなぐ力が、未来をつくる。</div>
+  </div>
+</header>
+
+<!-- ② 課題共感 -->
+<section class="sec-pain">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sec-label">ISSUE</p>
+      <h2 class="sec-title">こんな毎日に、なっていませんか。</h2>
+    </div>
+    <div class="pain-grid reveal">
+      <div class="pain-item">任せたはずの仕事が、結局ぜんぶ自分に戻ってくる</div>
+      <div class="pain-item">メンバーはいるのに、自分が指示を出さないと動かない</div>
+      <div class="pain-item">講座やイベントの運営に追われて、本来やるべき仕事に時間が使えない</div>
+      <div class="pain-item">AIを事業に活かしたいのに、何から手をつければいいか分からない</div>
+    </div>
+    <p class="pain-turn reveal">
+      それは、あなたの力不足ではありません。<br>
+      <strong>経営と現場の「間」</strong>に、詰まりがあるだけです。
+    </p>
+  </div>
+</section>
+
+<!-- ③ 事業共創パートナーとは -->
+<section class="sec-about">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sec-label">ABOUT</p>
+      <h2 class="sec-title">事業共創パートナーとは</h2>
+      <div class="about-head">
+        <div>
+          <p class="about-copy">経営と現場の“間”の詰まりを、<br>AIと人で整える。</p>
+          <div class="about-body">
+            <p>コンサルタントのように「答えを渡す」のでも、代行のように「作業を引き受ける」のでもありません。あなたの隣に立ち、想いを言葉にし、人の強みを見極めて適材適所に配置し、AIも仲間に加えて——<strong style="color: var(--ink);">チームが自分で動き出す状態</strong>を一緒につくる。それが、事業共創パートナーの仕事です。</p>
+          </div>
+        </div>
+        <figure class="about-visual">
+          <img src="images/team-collab.jpg" alt="対話を重ねながら、共に事業を形づくっていくチームの水彩イメージ" width="1400" height="933" loading="lazy">
+        </figure>
+      </div>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <p class="pillar-num">01</p>
+        <h3>想いを、言葉にする</h3>
+        <p>頭の中にある構想やまだ言葉になっていない価値観を、対話で引き出して見える化。判断の軸が立つと、チームへの伝え方が変わります。</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-num">02</p>
+        <h3>人の強みを、活かしきる</h3>
+        <p>一人ひとりの得意を見極めて役割を設計し、適材適所に采配。「指示がないと動けないチーム」から「それぞれが持ち場で動くチーム」へ。</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-num">03</p>
+        <h3>AIを、仲間にする</h3>
+        <p>繰り返しの業務はAIに任せ、人は人にしかできない仕事へ。ツール導入で終わらせず、事業が回り続ける仕組みまで落とし込みます。</p>
+      </div>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-step">整理</div><span class="flow-arrow">→</span>
+      <div class="flow-step">つなぐ</div><span class="flow-arrow">→</span>
+      <div class="flow-step">仕組み</div><span class="flow-arrow">→</span>
+      <div class="flow-step">循環</div>
+    </div>
+    <p class="flow-caption reveal">契約が終わったあとも、チームと仕組みが資産として残ります。</p>
+    <div class="about-principle reveal">
+      <strong>全プラン共通の原則</strong>— 私は運営実務の担い手にはなりません。実務は、適性を見極めたチームメンバーや専門メンバーが担う設計にし、私は「人とチームを動かす側」に立ちます。だから、私がいなくなっても回る事業が残ります。
+    </div>
+  </div>
+</section>
+
+<!-- ④ 関わり方と料金 -->
+<section class="sec-price" id="price">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sec-label">MENU</p>
+      <h2 class="sec-title">関わり方と料金</h2>
+      <div class="price-head">
+        <p class="price-lead">「何をやるか」ではなく、<strong>「どのレベルで関わるか」</strong>。<br>事業のフェーズに合わせて、関わりの深さを選べます。</p>
+        <figure class="price-visual">
+          <img src="images/community-circle.jpg" alt="人と人が輪になってつながり、あたたかく循環するコミュニティの水彩イメージ" width="1400" height="933" loading="lazy">
+        </figure>
+      </div>
+    </div>
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <p class="price-name">業務改善<br>コンサルティング</p>
+        <p class="price-for">まず整理から始めたい方へ</p>
+        <p class="price-amount"><span class="yen">月額 ¥100,000</span><span class="unit">〜（税別）</span></p>
+        <p class="price-desc">月1回のミーティングで、事業・チーム・優先順位を整理して見える化。整理マップなどの成果物が毎月手元に残ります。期間中はチャットでのご相談も可能です。</p>
+      </div>
+      <div class="price-card featured">
+        <span class="badge">おすすめ</span>
+        <p class="price-name">事業共創<br>パートナー</p>
+        <p class="price-for">チームが動き出す状態を作りたい方へ</p>
+        <p class="price-amount"><span class="yen">月額 ¥250,000</span><span class="unit">〜（税別）</span></p>
+        <p class="price-desc">業務改善に加えて、人の強みを見極めた役割設計と適材適所の采配まで。チーム／コミュニティの設計、AI活用、仕組み化を一緒に進めます。必要に応じて専門メンバーもアサインします。</p>
+      </div>
+      <div class="price-card">
+        <p class="price-name">事業共創パートナー<br>実行伴走</p>
+        <p class="price-for">プロジェクトを動かすところまで任せたい方へ</p>
+        <p class="price-amount"><span class="yen">月額 ¥500,000</span><span class="unit">〜（税別）</span></p>
+        <p class="price-desc">パートナーの内容に加えて、実プロジェクト推進の指揮まで。定例ミーティング・進行管理・関係者調整・AI導入・コミュニティ運営設計を担います。</p>
+      </div>
+    </div>
+    <p class="price-note">
+      新規事業・イベント等のスポット支援（¥300,000〜／案件・税別）、デザイン・経理・システム構築などの専門メンバーのアサインも承ります。詳しくは個別戦略会議でご相談ください。
+    </p>
+  </div>
+</section>
+
+<!-- ⑤ メンバー紹介 -->
+<section class="sec-profile">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sec-label">MEMBERS</p>
+      <h2 class="sec-title">メンバー紹介</h2>
+      <p class="members-lead">Unfolding Partners は、一人ではなくチームです。<br>それぞれの得意を持ち寄って、あなたの事業に伴走します。</p>
+    </div>
+    <div class="profile-inner reveal">
+      <figure class="profile-photo">
+        <img src="images/profile-ayaka.jpg" alt="中村綾花（事業共創パートナー）" width="1200" height="1500" loading="lazy">
+      </figure>
+      <div class="profile-body">
+        <p class="profile-kana">NAKAMURA AYAKA</p>
+        <p class="profile-name">中村綾花</p>
+        <p class="profile-role">事業共創パートナー｜Unfolding Partners</p>
+        <!-- 紹介文: あやかさん本人の言葉（2026-07-06）。原文のまま・磨き禁止 -->
+        <p class="profile-text">
+          経営者と現場の間に立ち、講座・コミュニティ・新規事業の立ち上げなど伴走。人・AI・仕組みをつなぎ、経営者が一人で抱えなくても事業が育つ環境を設計。思考整理から実装まで伴走し、チームと共に成長する事業づくりを支援しています。
+        </p>
+        <blockquote class="profile-quote">
+          誰に投げていいかわからない問題、一旦投げてもらったら一緒に整理します。
+        </blockquote>
+        <p class="profile-skills-label">得意なこと</p>
+        <div class="profile-chips">
+          <span>経営者の思考整理・壁打ち</span>
+          <span>人・AI・仕組みをつないだ事業設計</span>
+          <span>チーム設計・役割設計</span>
+          <span>コミュニティ・講座運営</span>
+          <span>新規事業の立ち上げ伴走</span>
+          <span>事業整理・仕組み化</span>
+          <span>属人化の解消</span>
+          <span>AI活用・業務改善</span>
+          <span>チームビルディング</span>
+        </div>
+        <p class="profile-facts-line">
+          経営者伴走 11年・10社 ／ コミュニティ・イベント立ち上げ 9件 ／ 立ち上げ2週間で2,000名が集まったAI実践コミュニティの運営 ／ 福岡を拠点に全国オンライン対応
+        </p>
+        <p class="profile-mission">人の可能性を解放し、<br>共創で循環する未来をつくる。</p>
+      </div>
+    </div>
+
+    <hr class="member-divider">
+
+    <div class="profile-inner reveal">
+      <figure class="profile-photo">
+        <img src="images/profile-ayumi.jpg" alt="西村歩（事業運営サポート）" width="998" height="1500" loading="lazy">
+      </figure>
+      <div class="profile-body">
+        <p class="profile-kana">NISHIMURA AYUMI</p>
+        <p class="profile-name">西村 歩</p>
+        <p class="profile-role">事業運営サポート｜経理・労務・総務｜コミュニティ運営</p>
+        <!-- 紹介文: あゆみさん支給の原文（2026-07-06）から段落抜粋。書き換え禁止 -->
+        <p class="profile-text">
+          日々の請求・入金管理、契約や労務まわりの対応、現場で起こる細かな調整ごと。表には出にくいけれど、事業を続けていくうえで欠かせない仕事を、一つひとつ整え、安心して任せてもらえる形にすることを大切にしています。
+        </p>
+        <p class="profile-text">
+          現在は経営者やコミュニティ運営者の方々に伴走しながら、事務局運営、顧客対応、決済管理、会員サイト整備、イベント運営など、事業の裏側を支えるサポートを行っています。
+        </p>
+        <blockquote class="profile-quote">
+          大切にしたいのは、人の想いを、必要な人や仕組みにつなげること。頑張る人が本来の力を発揮できるように土台を整えることが、私の役割だと思っています。
+        </blockquote>
+        <p class="profile-skills-label">得意なのは、「まとめる→構築」</p>
+        <div class="profile-chips">
+          <span>経理・労務・総務の実務経験</span>
+          <span>介護現場での対人支援経験・マニュアル整備・仕組みづくり</span>
+          <span>講座・コミュニティ・イベント運営サポート</span>
+          <span>顧客対応、決済管理、会員サイト・事務局運営</span>
+        </div>
+        <p class="profile-mission">人と事業の可能性を信じ、<br>安心して前に進める仕組みを整える。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ CTA -->
+<section class="sec-cta" id="contact">
+  <div class="cta-circle c1"></div>
+  <div class="cta-circle c2"></div>
+  <div class="wrap cta-inner">
+    <div class="reveal">
+      <p class="cta-label">CONTACT</p>
+      <h2 class="cta-title">個別戦略会議<span style="font-size: 0.6em; letter-spacing: 0.1em;">（60分・無料）</span></h2>
+      <p class="cta-sub">まずは、現在地の整理から。</p>
+      <p class="cta-body">
+        事業・チーム・AIの現状を一緒に整理し、<br>
+        いま本当にやるべきことを明確にする60分です。<br>
+        売り込みは一切ありません。話して整理するだけでも、景色が変わります。
+      </p>
+      <p class="cta-frame">公式LINEにご登録いただいた方へ、毎月数枠のみご案内しています</p>
+      <div>
+        <a class="btn-line" href="https://lin.ee/iEtztWo" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.55 7.39 8.35 8.03.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.88.55 1.08-.46 5.84-3.44 7.97-5.89C21.44 13.4 22 11.85 22 10.13 22 5.64 17.52 2 12 2z"/></svg>
+          公式LINEに登録する
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-info">
+      <h3 class="footer-info-title">運営者情報</h3>
+      <dl class="footer-info-list">
+        <div><dt>サービス名</dt><dd>Unfolding Partners</dd></div>
+        <div><dt>運営者</dt><dd>中村綾花（事業共創パートナー）</dd></div>
+        <div><dt>運営会社</dt><dd>株式会社青い鳥（<a href="https://aoitori.family/company-info/" target="_blank" rel="noopener">会社概要</a>）</dd></div>
+        <div><dt>拠点</dt><dd>福岡</dd></div>
+        <div><dt>お問い合わせ</dt><dd><a href="https://lin.ee/iEtztWo">公式LINE</a>よりご連絡ください</dd></div>
+      </dl>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-brand">Unfolding Partners</span>
+      <span>© 2026 中村綾花｜事業共創パートナー</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // スクロールで表示
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
