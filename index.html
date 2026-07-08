@@ -37,6 +37,7 @@
     --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  .nb { display: inline-block; } /* 文節単位の折り返し用 */
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--sans);
@@ -402,10 +403,10 @@
   <div class="wrap hero-inner">
     <div class="hero-main">
       <p class="hero-brand">Unfolding Partners</p>
-      <h1>チームを増やしたのに、<br>なぜか自分が一番忙しい。</h1>
+      <h1>チームを増やしたのに、<br><span class="nb">なぜか自分が</span><span class="nb">一番忙しい。</span></h1>
       <p class="hero-lead">
-        講座・コミュニティ・教育ビジネスを運営する経営者のための、事業共創パートナー。<br>
-        経営者の想いを、人・チーム・AIの力で形にし、<br class="pc">人の可能性が解放され、共創で循環する事業をつくります。
+        <span class="nb">講座・コミュニティ・</span><span class="nb">教育ビジネスを運営する</span><span class="nb">経営者のための、</span><span class="nb">事業共創パートナー。</span><br>
+        <span class="nb">経営者の想いを、</span><span class="nb">人・チーム・AIの力で形にし、</span><br class="pc"><span class="nb">人の可能性が解放され、</span><span class="nb">共創で循環する</span><span class="nb">事業をつくります。</span>
       </p>
       <p class="hero-name"><span>中村綾花｜事業共創パートナー</span></p>
       <a class="btn-line" href="https://lin.ee/iEtztWo" target="_blank" rel="noopener">
